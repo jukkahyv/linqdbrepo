@@ -15,8 +15,8 @@ namespace LinqRepoTest.Repository {
 			return context.Set<T>();
 		}
 
-		public void Add<T>(T entity) where T : class {
-			Set<T>().Add(entity);
+		public T Add<T>(T entity) where T : class {
+			return Set<T>().Add(entity);
 		}
 
 		public T Find<T>(object id) where T : class {

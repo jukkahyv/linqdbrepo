@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\IEntityWithCustomer.cs" />
+    <Compile Include="Entity\IEntityWithIntId.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

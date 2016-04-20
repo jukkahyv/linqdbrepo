@@ -2,7 +2,7 @@
 
 namespace LinqRepoTest.Entity {
 
-	public class Customer {
+	public class Customer : IEntryWithIntId {
 
 		public int Id { get; set; }
 

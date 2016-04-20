@@ -1,6 +1,6 @@
 ﻿namespace LinqRepoTest.Entity {
 
-	public class Product : IEntityWithCustomer {
+	public class Product : IEntryWithIntId, IEntityWithCustomer {
 
 		public virtual Customer Customer { get; set; }
 
