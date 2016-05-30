@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ProductsApiController.cs" />
     <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\IEntityWithCustomer.cs" />
     <Compile Include="Entity\IEntityWithIntId.cs" />

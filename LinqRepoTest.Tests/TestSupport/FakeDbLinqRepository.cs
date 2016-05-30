@@ -22,6 +22,24 @@ namespace LinqRepoTest.Tests.TestSupport {
 			}
 
 			return entity;
+
+		}
+
+		public TEntity AddAndSave<TEntity>(TEntity entity) where TEntity : class {
+
+			Add(entity);
+			SaveChanges();
+			return entity;
+
+		}
+
+		public void AddAndSave<TEntity>(params TEntity[] entities) where TEntity : class {
+
+			foreach (var entity in entities)
+				Add(entity);
+
+			SaveChanges();
+
 		}
 
 		public T Find<T>(object id) where T : class {
@@ -35,9 +53,9 @@ namespace LinqRepoTest.Tests.TestSupport {
 
 		}
 
-		public List<TEntity> List<TEntity>() {
+		public List<TEntity> List<TEntity>() => List<TEntity>(typeof(TEntity));
 
-			var t = typeof(TEntity);
+		public List<TEntity> List<TEntity>(Type t) {
 
 			if (!entities.ContainsKey(t))
 				entities.Add(t, new List<TEntity>());
